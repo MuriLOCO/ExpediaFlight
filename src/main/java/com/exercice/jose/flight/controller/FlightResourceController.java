@@ -1,6 +1,5 @@
 package com.exercice.jose.flight.controller;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +27,7 @@ public class FlightResourceController {
    * @return - List of Flights under this time window
    */
   @RequestMapping(value = "/departure", method = RequestMethod.GET)
-  public List<Flight> getDeparture(@RequestParam(value = "departure", required = true) LocalDateTime departure) {
+  public List<Flight> getDeparture(@RequestParam(value = "departure", required = true) String departure) {
     return flightService.getFlightsByDeparture(departure);
   }
 }

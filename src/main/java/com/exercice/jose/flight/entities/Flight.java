@@ -1,23 +1,23 @@
 package com.exercice.jose.flight.entities;
 
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Table
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
 public class Flight {
 
-  public Flight(String flightName, LocalDateTime departure) {
+  public Flight(String flightName, LocalTime departure) {
     this.flightName = flightName;
     this.departure = departure;
   }
@@ -28,5 +28,5 @@ public class Flight {
 
   private String flightName;
 
-  private LocalDateTime departure;
+  private LocalTime departure;
 }
